@@ -1,0 +1,42 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  transition: background 0.3s ease;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 300 / 3 */
+  grid-template-rows: repeat(3, 83px);   /* 250 / 3 ≈ 83 */
+  gap: 6px;
+}
+
+.tile {
+  width: 100px;
+  height: 83px;
+  background-image: url("https://i.ibb.co/NgrK8RLj/Picsart-25-09-03-12-44-43-545.png");
+  background-size: 300px 250px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  z-index: 10;
+}
